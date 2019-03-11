@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+        <% articles.forEach(function(article){ %>
+             <div class="col-lg-3 col-md-4 col-sm-12 d-flex align-items-stretch">
+                    <div class="card">
+                            <!--Card image-->
+                            <img class="img-fluid" src=<%- article.urlToImage %> alt="Card image cap">
+                            <!--/.Card image-->
+                        
+                            <!--Card content-->
+                            <div class="card-block">
+                                <!--Title-->
+                                <h4 class="card-title"><%= article.title %></h4>
+                                <!--Text-->
+                                <p class="card-text text-dark"><%= article.description.split(' ').slice(0,30).join(' '); %></p>
+                                <a href=<%= article.url %>><button type="button" class="btn btn-danger btn-circle"><i class="fas fa-angle-right"></i>
+                                </button>
+                                </a>
+                            </div>
+                            <!--/.Card content-->
+                        
+                        </div>
+                    </div> 
+        <% }); %>
+        
+                     
+                    
+            </div>
+        </div>
+
+    <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.js"></script>
+</body>
+</html>
