@@ -29,8 +29,7 @@
                                 <h4 class="card-title"><%= article.title %></h4>
                                 <!--Text-->
                                 <p class="card-text text-dark"><%= article.description.split(' ').slice(0,30).join(' '); %></p>
-                                <a href=<%= article.url %>><button type="button" class="btn btn-danger btn-circle"><i class="fas fa-angle-right"></i>
-                                </button>
+                                <a href=<%= article.url %> target = "_blank" class="btn btn-primary">Read More
                                 </a>
                             </div>
                             <!--/.Card content-->
