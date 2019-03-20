@@ -15,7 +15,7 @@ app.get("/test",(req,res)=>{
 })
 app.post('/news',(req,res)=>{
     var options = {
-        url : "https://newsapi.org/v2/everything?apiKey=fbefc601f21e4742ab074cf42a8fb2a1",
+        url : "https://newsapi.org/v2/everything?apiKey=",
         qs : {
             q : req.body.search
         }
